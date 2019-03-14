@@ -1,11 +1,11 @@
-package aulaUm;
+package br.com.Moraesofia.dsp20191.aulas0104.ap;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * Criar um arquivo texto, escrever, ler e imprimir o conteúdo desse arquivo.
+ * Criar um arquivo texto, escrever, ler e imprimir o conteï¿½do desse arquivo.
  * 
  * @author Sofia
  *
@@ -17,7 +17,7 @@ public class AulaUm {
     public static void main(final String[] args) {
 
         try (FileWriter fw = new FileWriter(fileName)) {
-            fw.write("Este é o conteúdo deste arquivo.");
+            fw.write("Este ï¿½ o conteï¿½do deste arquivo.");
 
         } catch (IOException ioe) {
             ioe.printStackTrace();
