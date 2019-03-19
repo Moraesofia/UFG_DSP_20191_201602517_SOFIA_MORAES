@@ -10,7 +10,7 @@ import java.io.IOException;
  * @author Sofia
  *
  */
-public class AulaUm {
+public class ExercicioSala {
 
     private static String fileName = "Arquivo.txt";
 
