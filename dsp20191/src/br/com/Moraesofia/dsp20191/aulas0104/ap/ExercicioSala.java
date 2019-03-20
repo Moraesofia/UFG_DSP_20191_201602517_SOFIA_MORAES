@@ -5,19 +5,19 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * Criar um arquivo texto, escrever, ler e imprimir o conte�do desse arquivo.
- * 
+ * Criar um arquivo texto, escrever, ler e imprimir o conteudo desse arquivo.
+ *
  * @author Sofia
  *
  */
 public class ExercicioSala {
 
-    private static String fileName = "Arquivo.txt";
+    private static String FILE_NAME = "Arquivo.txt";
 
     public static void main(final String[] args) {
 
-        try (FileWriter fw = new FileWriter(fileName)) {
-            fw.write("Este � o conte�do deste arquivo.");
+        try (FileWriter fw = new FileWriter(FILE_NAME)) {
+            fw.write("Este eh o conteudo deste arquivo.");
 
         } catch (IOException ioe) {
             ioe.printStackTrace();
@@ -25,7 +25,7 @@ public class ExercicioSala {
 
         FileReader fr;
         try {
-            fr = new FileReader(fileName);
+            fr = new FileReader(FILE_NAME);
             int i;
             while ((i = fr.read()) != -1) {
                 System.out.print((char) i);

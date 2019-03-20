@@ -6,13 +6,13 @@ import java.io.PrintWriter;
 
 public class ExercicioTres {
 
-    private static String fileName = "Arquivo.txt";
+    private static String FILE_NAME = "Arquivo.txt";
 
     public static void main(String[] args) {
 
         PrintWriter pw;
         try {
-            pw = new PrintWriter(new FileWriter(fileName, true));
+            pw = new PrintWriter(new FileWriter(FILE_NAME, true));
 
             pw.println();
             pw.println("---- Novo Conteúdo:");
