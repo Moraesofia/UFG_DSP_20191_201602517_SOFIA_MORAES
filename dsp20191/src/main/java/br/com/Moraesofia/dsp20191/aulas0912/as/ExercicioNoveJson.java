@@ -1,24 +1,30 @@
 package br.com.Moraesofia.dsp20191.aulas0912.as;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.Map.Entry;
 
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-/**
- *
- * @author sofia
- *
- */
-public class ExercicioOitoJson {
+public class ExercicioNoveJson {
 
 	private static String JSON_FILE = "students.json";
+
+	private static String RESOURCES_PATH = "src/main/resources/";
+
+	private static String MATRICULA = "201602517";
+
+	private static String conteudo;
 
 	public static void main(String[] args) throws IOException {
 
@@ -30,7 +36,6 @@ public class ExercicioOitoJson {
 		JsonObject rootObject = rootElement.getAsJsonObject();
 		JsonObject students = rootObject.getAsJsonObject("class");
 		JsonArray array = null;
-		JsonArray aulas = null;
 
 		for (Entry<String, JsonElement> entry : students.entrySet()) {
 			array = entry.getValue().getAsJsonArray();
@@ -38,25 +43,23 @@ public class ExercicioOitoJson {
 
 		for (JsonElement item : array) {
 			JsonObject o = item.getAsJsonObject();
-			System.out.println("....................................");
-			System.out.println("Matricula: " + o.get("matricula"));
-			System.out.println("Nome: " + o.get("firstname"));
-			System.out.println("Sobrenome: " + o.get("lastname"));
-			System.out.println("Apelido: " + o.get("nickname"));
-			System.out.println("Frequencia: ");
-			JsonObject freq = o.getAsJsonObject("frequencia");
 
-			for (Entry<String, JsonElement> f : freq.entrySet()) {
-				aulas = f.getValue().getAsJsonArray();
-
-				for (JsonElement aula : aulas) {
-					JsonObject a = aula.getAsJsonObject();
-					System.out.println(" aulas" + a.get("numero") + ": " + a.get("#text"));
-				}
+			String m = o.get("matricula").toString();
+			if (m.equals("\"201602517\"")) {
+				Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls()
+						.setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+				conteudo = gson.toJson(o);
+				break;
 			}
 
 		}
 
-	}
+		// Salva arquivo
+		File novoJson = new File(RESOURCES_PATH + MATRICULA + ".json");
+		FileWriter fw = new FileWriter(novoJson);
+		fw.write(conteudo);
+		fw.flush();
+		fw.close();
 
+	}
 }

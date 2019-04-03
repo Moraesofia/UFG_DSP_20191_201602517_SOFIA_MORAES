@@ -1,0 +1,18 @@
+{
+  "matricula": "201602517",
+  "firstname": "SOFIA",
+  "lastname": "MORAES",
+  "nickname": "sofia.moraes",
+  "frequencia": {
+    "aulas": [
+      {
+        "numero": "0104",
+        "#text": "F"
+      },
+      {
+        "numero": "0508",
+        "#text": "P"
+      }
+    ]
+  }
+}
