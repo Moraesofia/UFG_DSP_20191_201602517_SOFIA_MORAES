@@ -22,10 +22,6 @@ public class ExercicoDezJson {
 
 	private static String RESOURCES_PATH = "src/main/resources/";
 
-	private static String MATRICULA = "201602517";
-
-	private static String conteudo;
-
 	public static void main(String[] args) throws IOException {
 
 		JsonParser parser = new JsonParser();
