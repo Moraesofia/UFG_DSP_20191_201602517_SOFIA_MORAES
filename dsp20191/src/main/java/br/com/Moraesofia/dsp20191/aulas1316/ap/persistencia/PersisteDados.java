@@ -4,6 +4,7 @@ import br.com.Moraesofia.dsp20191.aulas1316.ap.entidades.Cargo;
 import br.com.Moraesofia.dsp20191.aulas1316.ap.entidades.Departamento;
 import br.com.Moraesofia.dsp20191.aulas1316.ap.entidades.Funcionario;
 import br.com.Moraesofia.dsp20191.aulas1316.ap.entidades.Lotacao;
+import br.com.Moraesofia.dsp20191.aulas1316.ap.persistencia.base.PersistenciaJdbc;
 
 public class PersisteDados extends PersistenciaJdbc {
 
@@ -51,13 +52,13 @@ public class PersisteDados extends PersistenciaJdbc {
         return true;
     }
 
-    public boolean persisteLotacao(Lotacao l, Funcionario f) throws Exception {
+    public boolean persisteLotacao(Lotacao l) throws Exception {
 
         preparaPersistencia();
 
-        String sql = "INSERT INTO LOTACAO " + "VALUES('" + l.getId() + "','" + l.getDataInicial().toString() + "','"
-                + l.getDataFinal().toString() + "','" + l.getCargo().getId() + "','" + l.getDepartamento().getId()
-                + "','" + f.getId() + "')";
+        String sql = "INSERT INTO LOTACAO " + "VALUES('" + l.getId() + "','" + l.getDataInicial() + "','"
+                + l.getDataFinal() + "','" + l.getCargo().getId() + "','" + l.getDepartamento().getId() + "','"
+                + l.getFuncionario().getId() + "')";
 
         stmt.executeUpdate(sql);
         System.out.println("A Lotacao foi persistida corretamente.");

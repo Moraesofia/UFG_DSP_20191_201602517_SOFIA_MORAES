@@ -1,5 +1,7 @@
 package br.com.Moraesofia.dsp20191.aulas1316.ap.persistencia;
 
+import br.com.Moraesofia.dsp20191.aulas1316.ap.persistencia.base.PersistenciaJdbc;
+
 public class DeletaTabelas extends PersistenciaJdbc {
 
     public boolean excluiTabelaLotacao() throws Exception {

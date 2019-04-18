@@ -1,4 +1,4 @@
-package br.com.Moraesofia.dsp20191.aulas1316.ap.persistencia;
+package br.com.Moraesofia.dsp20191.aulas1316.ap.persistencia.base;
 
 import java.sql.Connection;
 import java.sql.Statement;

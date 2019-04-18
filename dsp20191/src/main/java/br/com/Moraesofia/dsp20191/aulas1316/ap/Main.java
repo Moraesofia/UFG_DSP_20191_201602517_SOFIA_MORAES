@@ -77,10 +77,8 @@ public class Main {
 
         // Cria Lotacoes
         criaLotacoes();
-        int index = 0;
         for (Lotacao lota : listLotacoes) {
-            status = pd.persisteLotacao(lota, listFunc.get(index));
-            index++;
+            status = pd.persisteLotacao(lota);
         }
 
         if (!status) {
@@ -94,7 +92,7 @@ public class Main {
     public static void criaFuncionarios() {
         for (int i = 0; i < QNT_FUNC; i++) {
 
-            long id = 66666 + i;
+            long id = 60 + i;
             String nome = "Funcionario" + Integer.toString(i);
             long matricula = 22222 + i;
 
@@ -108,7 +106,7 @@ public class Main {
     public static void criaDepartamentos() {
         for (int i = 0; i < QNT_DEPT; i++) {
 
-            long id = 77777 + i;
+            long id = 70 + i;
             String nome = "Departamento" + Integer.toString(i);
 
             Departamento d = new Departamento(id, nome);
@@ -121,7 +119,7 @@ public class Main {
     public static void criaCargos() {
         for (int i = 0; i < QNT_CARGO; i++) {
 
-            long id = 88888 + i;
+            long id = 80 + i;
             String nome = "Cargo" + Integer.toString(i);
             double salario = 100 + i * 100;
 
@@ -133,15 +131,17 @@ public class Main {
     }
 
     public static void criaLotacoes() throws ParseException {
+        // Numero de Lotações igual ao número de funcionários
         for (int i = 0; i < QNT_FUNC; i++) {
-            long id = 99999 + i;
+            long id = 90 + i;
             Date dataInicial = new Date();
             Date dataFinal = new Date(dataInicial.getTime() + 86400000); // + 1 dia em mili seg
             Random r = new Random();
             Cargo cargo = listCargos.get(r.nextInt(QNT_CARGO));
             Departamento departamento = listDepts.get(r.nextInt(QNT_DEPT));
+            Funcionario funcionario = listFunc.get(i);
 
-            Lotacao l = new Lotacao(id, dataInicial, dataFinal, cargo, departamento);
+            Lotacao l = new Lotacao(id, dataInicial.toString(), dataFinal.toString(), cargo, departamento, funcionario);
             listLotacoes.add(l);
         }
 

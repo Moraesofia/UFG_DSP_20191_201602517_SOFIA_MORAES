@@ -1,5 +1,7 @@
 package br.com.Moraesofia.dsp20191.aulas1316.ap.persistencia;
 
+import br.com.Moraesofia.dsp20191.aulas1316.ap.persistencia.base.PersistenciaJdbc;
+
 public class CriaTabelas extends PersistenciaJdbc {
 
     public boolean criaTabelaFuncionario() throws Exception {

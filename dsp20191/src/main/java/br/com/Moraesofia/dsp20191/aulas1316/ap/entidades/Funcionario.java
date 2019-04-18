@@ -15,6 +15,9 @@ public class Funcionario {
         this.matricula = matricula;
     }
 
+    public Funcionario() {
+    }
+
     public Long getId() {
         return id;
     }
@@ -25,6 +28,18 @@ public class Funcionario {
 
     public Long getMatricula() {
         return matricula;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setMatricula(Long matricula) {
+        this.matricula = matricula;
     }
 
 }

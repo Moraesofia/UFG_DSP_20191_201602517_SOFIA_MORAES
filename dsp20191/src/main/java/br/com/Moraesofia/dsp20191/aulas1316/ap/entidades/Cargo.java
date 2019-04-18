@@ -15,6 +15,9 @@ public class Cargo {
         this.salario = salario;
     }
 
+    public Cargo() {
+    }
+
     public Long getId() {
         return id;
     }
@@ -25,6 +28,18 @@ public class Cargo {
 
     public Double getSalario() {
         return salario;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setSalario(Double salario) {
+        this.salario = salario;
     }
 
 }

@@ -1,5 +1,7 @@
 package br.com.Moraesofia.dsp20191.aulas1316.ap.persistencia;
 
+import br.com.Moraesofia.dsp20191.aulas1316.ap.persistencia.base.PersistenciaJdbc;
+
 public class AlteraTabelas extends PersistenciaJdbc {
 
     public boolean adocionaFKTabelaLotacao() throws Exception {
@@ -30,24 +32,5 @@ public class AlteraTabelas extends PersistenciaJdbc {
         connection.close();
         return true;
     }
-
-    // public boolean adicionaFuncEmLotacao() throws Exception {
-    //
-    // preparaPersistencia();
-    //
-    // System.out.println("Alterando a Tabela Lotacao");
-    //
-    // String sql = "ALTER TABLE LOTACAO " + "ADD COLUMN FUNC LONG NOT NULL";
-    //
-    // stmt.executeUpdate(sql);
-    //
-    // System.out.println("Tabela Lotacao alterada com sucesso! (Coluna Funcionario
-    // adicionada)");
-    //
-    // // STEP 4: Clean-up environment
-    // stmt.close();
-    // connection.close();
-    // return true;
-    // }
 
 }
