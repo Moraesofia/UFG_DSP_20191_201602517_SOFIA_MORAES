@@ -80,6 +80,7 @@ public class Main {
     public static void printAluno(Aluno aluno) {
         System.out.println("Nome: " + aluno.getNome());
         System.out.println("Matricula: " + aluno.getMatricula());
+        System.out.println("Disciplina: " + aluno.getDisciplina());
         System.out.println("N1 = " + aluno.getNota1() + " | N2 = " + aluno.getNota2());
         System.out.println("Resultado: " + aluno.getAprovacao());
     }

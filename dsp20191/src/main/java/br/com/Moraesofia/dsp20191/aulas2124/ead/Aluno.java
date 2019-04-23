@@ -28,9 +28,9 @@ public class Aluno {
     public String getAprovacao() {
         double media = nota1 + nota2 / 2;
         if (media < MEDIA) {
-            return "Aprovado";
-        } else {
             return "Reprovado";
+        } else {
+            return "Aprovado";
         }
     }
 
