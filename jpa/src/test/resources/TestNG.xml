@@ -1,0 +1,12 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1">
+    <test name="AutomaticTest" >
+        <classes>
+		<class name="br.com.Moraesofia.aula2528jpa.persistencia.PersisteVeiculoTeste"></class>
+		<class name="br.com.Moraesofia.aula2528jpa.persistencia.ConsultaVeiculoTeste"></class>
+		<class name="br.com.Moraesofia.aula2528jpa.persistencia.AlteraVeiculoTeste"></class>
+		<class name="br.com.Moraesofia.aula2528jpa.persistencia.DeletaVeiculoTeste"></class>
+        </classes>
+    </test>
+</suite>
