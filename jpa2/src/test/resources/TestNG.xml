@@ -1,0 +1,40 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1">
+    <test name="PessoaCrud">
+        <classes>
+            <class name="br.com.moraesofia.jpa2.persistencia.pessoa.PersistePessoaTeste"></class>
+            <class name="br.com.moraesofia.jpa2.persistencia.pessoa.ConsultaPessoaTeste"></class>
+            <class name="br.com.moraesofia.jpa2.persistencia.pessoa.AlteraPessoaTeste"></class>
+           <!-- <class nabr.com.moraesofia.jpa2.model.persistenciancia.pessoa.DeletaPessoaTeste"></class>-->
+        </classes>
+    </test>
+    <test name="VeiculoCrud">
+            <classes>
+                <class name="br.com.moraesofia.jpa2.persistencia.veiculo.PersisteVeiculoTeste"></class>
+               <!-- <class nabr.com.moraesofia.jpa2.model.persistenciancia.veiculo.ConsultaVeiculoTeste"></class>
+                <class nabr.com.moraesofia.jpa2.model.persistenciancia.veiculo.AlteraVeiculoTeste"></class>
+                <class nabr.com.moraesofia.jpa2.model.persistenciancia.veiculo.DeletaVeiculoTeste"></class>-->
+        </classes>
+    </test>
+    <test name="ProdutoCrud">
+        <classes>
+            <class name="br.com.moraesofia.jpa2.persistencia.Produto.PersisteProdutoTeste"></class>
+        </classes>
+    </test>
+    <test name="PedidoCrud">
+        <classes>
+            <class name="br.com.moraesofia.jpa2.persistencia.pedido.PersistePedidoTeste"></class>
+        </classes>
+    </test>
+    <test name="LivrariaCrud">
+        <classes>
+            <class name="br.com.moraesofia.jpa2.persistencia.livraria.PersisteLivrariaTeste"></class>
+        </classes>
+    </test>
+    <test name="TurmaCrud">
+        <classes>
+            <class name="br.com.moraesofia.jpa2.persistencia.turma.PersisteTurmaTeste"></class>
+        </classes>
+    </test>
+</suite>
